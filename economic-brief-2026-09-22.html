@@ -72,7 +72,6 @@ function pause(){
   if(isPaused){
     isPaused=false;
     synth.resume();
-    setTimeout(()=>speakNext(runId),30);
   }else if(synth.speaking || currentUtterance){
     isPaused=true;
     synth.pause();
