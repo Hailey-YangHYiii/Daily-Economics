@@ -23,7 +23,7 @@ function read(){const x=localStorage.getItem(KEY);if(!x)return[];let arr=JSON.pa
 function render(){
  list.replaceChildren();let papers;try{papers=read()}catch(e){count.textContent='Local storage unavailable';message.textContent='Your browser does not allow local saving. Check privacy settings.';return}
  message.textContent='';count.textContent=papers.length+' saved in this browser';
- if(!papers.length){const box=add(list,'div','还没有收藏。打开最新一期 Reading Economics 周刊，勾选 Save to My Papers 即可加入。','saved-empty');box.style.gridColumn='1 / -1';const link=add(box,'a',' Browse latest Reading Economics →');link.href='literature-weekly-2026-10-23.html';return}
+ if(!papers.length){const box=add(list,'div','还没有收藏。打开最新一期 Reading Economics 周刊，勾选 Save to My Papers 即可加入。','saved-empty');box.style.gridColumn='1 / -1';const link=add(box,'a',' Browse latest Reading Economics →');link.href='literature-weekly-2026-10-30.html';return}
  papers.sort((a,b)=>String(b.savedAt||'').localeCompare(String(a.savedAt||'')));
  for(const p of papers){
   const c=add(list,'article','','saved-card');
